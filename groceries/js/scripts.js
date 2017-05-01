@@ -11,16 +11,17 @@ $(document).ready(function() {
     event.preventDefault();
 
     // get elements for the array from the inputs
+     var produce = ["item-one", "item-two", "item-three", "item-four", "item-five"];
+    // var produce = [ $('input[name="item-one"]').val(),
+    //                 $('input[name="item-two"]').val(),
+    //                 $('input[name="item-three"]').val(),
+    //                 $('input[name="item-four"]').val(),
+    //                 $('input[name="item-five"]').val(), ];
 
-    var produce = [ $('input[name="item-one"]').val(),
-                    $('input[name="item-two"]').val(),
-                    $('input[name="item-three"]').val(),
-                    $('input[name="item-four"]').val(),
-                    $('input[name="item-five"]').val(), ];
 
 
     var capValues = produce.map(function(item){
-      // return $("input#" + item).val().toUpperCase();
+      return $("input#" + item).val().toUpperCase();
       });
 
     var sortedValues = capValues.sort();
